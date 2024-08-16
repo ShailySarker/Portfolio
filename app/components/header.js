@@ -1,16 +1,12 @@
 "use client"
-import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
-import logo from "../../public/images/Header_logo.png"
-import logoDark from "../../public/images/Header_logoDark.png"
-import { useTheme } from 'next-themes';
 import ThemeToggle from './themeToggle'
 import { IoMenu } from "react-icons/io5";
 import { FaXmark } from "react-icons/fa6";
+import Logo from './logo'
 
 export default function Header() {
-    const { theme } = useTheme();
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [click, setClick] = useState(false);
     const toggleMobileMenu = () => {
@@ -22,13 +18,7 @@ export default function Header() {
         <nav className='bg-white dark:bg-black text-black dark:text-white'>
             {/* <nav className='top-0 sticky bg-white z-50'> */}
             <div className='lg:px-28 md:px-8 px-5 lg:py-5 md:py-4 py-3 flex justify-between items-center'>
-                <div>
-                    {theme === 'dark' ? (
-                        <Image className='lg:max-w-60 md:w-40 w-32' src={logoDark} alt="Dark Mode Logo" />
-                    ) : (
-                        <Image className='lg:max-w-60 md:w-40 w-32' src={logo} alt="Light Mode Logo" />
-                    )}
-                </div>
+                <Logo />
                 <div className='flex items-center gap-10'>
                     <div className='lg:flex lg:gap-8 lg:text-lg lg:block hidden'>
                         <Link href="/">Home</Link>
