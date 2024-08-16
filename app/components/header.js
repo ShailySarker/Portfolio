@@ -13,7 +13,9 @@ export default function Header() {
         setMobileMenuOpen(!isMobileMenuOpen);
         setClick(!click);
     };
-
+    const handleComingSoon = () => {
+        alert("Coming Soon!!")
+    }
     return (
         <nav className='bg-white dark:bg-black text-black dark:text-white'>
             {/* <nav className='top-0 sticky bg-white z-50'> */}
@@ -30,7 +32,7 @@ export default function Header() {
                     </div>
                     <div className='flex items-center md:gap-4 gap-[10px]'>
                         <ThemeToggle />
-                        <button className='lg:block hidden md:py-2 py-[5px] lg:w-40 md:w-36 w-32 lg:text-lg bg-[#FD6F00] text-white rounded-md'>Download CV</button>
+                        <button onClick={handleComingSoon} className='lg:block hidden md:py-2 py-[5px] lg:w-40 md:w-36 w-32 lg:text-lg bg-[#FD6F00] text-white rounded-md'>Download CV</button>
                         <div className='lg:hidden visible'>
                             <button onClick={toggleMobileMenu} className=''>
                                 {
@@ -51,7 +53,7 @@ export default function Header() {
                                         <Link href="#projects">Projects</Link>
                                         <Link href="#testimonials">Testimonials</Link>
                                         <Link href="#contact">Contact</Link>
-                                        <button className='lg:hidden visible md:py-2 py-[5px] lg:w-40 md:w-36 w-32 lg:text-lg bg-[#FD6F00] text-white rounded-md'>Download CV</button>
+                                        <button onClick={handleComingSoon} className='lg:hidden visible md:py-2 py-[5px] lg:w-40 md:w-36 w-32 lg:text-lg bg-[#FD6F00] text-white rounded-md'>Download CV</button>
 
                                     </div>
                                 </div>
