@@ -4,6 +4,7 @@ import AboutLayout from './about'
 import ServicesLayout from './services'
 import ProjectsLayout from './projects'
 import TestimonialsLayout from './testimonials'
+import ContactLayout from './contact'
 
 export default function HomeLayout() {
     return (
@@ -13,6 +14,7 @@ export default function HomeLayout() {
             <ServicesLayout />
             <ProjectsLayout />
             <TestimonialsLayout />
+            <ContactLayout />
         </>
     )
 }
