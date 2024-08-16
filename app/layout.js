@@ -10,7 +10,7 @@ const poppins = Poppins({
 });
 export const metadata = {
   title: "Portfolio",
-  description: "Coded by Shaily Sarker",
+  description: "Coding by Shaily Sarker",
 };
 
 export default function RootLayout({ children }) {
