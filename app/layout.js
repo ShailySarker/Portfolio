@@ -1,11 +1,13 @@
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import Providers from "./providers";
 import Header from "./components/header";
 import Footer from "./components/footer";
 
-const inter = Inter({ subsets: ["latin"] });
-
+const poppins = Poppins({
+  weight: ['400', '600', '700'],
+  subsets: ['latin'],
+});
 export const metadata = {
   title: "Portfolio",
   description: "Coded by Shaily Sarker",
@@ -14,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={poppins.className}>
         <Providers>
           <Header />
           {children}
